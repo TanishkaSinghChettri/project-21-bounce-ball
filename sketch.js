@@ -5,7 +5,7 @@ var music;
 
 function preload(){
     // load sound here
-sound=loadSound("music.mp3")
+music=loadSound("music.mp3")
 }
 
 
@@ -40,29 +40,39 @@ function draw() {
     background(rgb(169,169,169));
     edges=createEdgeSprites();
     ball.bounceOff(edges);
-    ball.bounceOff(block1);
+   /* ball.bounceOff(block1);
     ball.bounceOff(block2);
     ball.bounceOff(block3);
     ball.bounceOff(block4);
+*/
+    
 
     
     //write code to bounce off ball from the block1 
     if(block1.isTouching(ball) || ball.bounceOff(block1)){
+        ball.setVelocityX=0;
+        ball.setVelocityY=0,
         ball.shapeColor = "blue";
         music.play();
     }
 
     if(block2.isTouching(ball) || ball.bounceOff(block2)){
+        ball.setVelocityX=0;
+        ball.setVelocityY=0,
         ball.shapeColor = "orange";
         music.play();
     }
 
     if(block3.isTouching(ball) || ball.bounceOff(block3)){
+        ball.setVelocityX=0;
+        ball.setVelocityY=0,
         ball.shapeColor = "green";
         music.play();
     }
 
     if(block4.isTouching(ball) || ball.bounceOff(block4)){
+        ball.setVelocityX=0;
+        ball.setVelocityY=0,
         ball.shapeColor = "purple";
         music.play();
     }
